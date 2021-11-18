@@ -1,5 +1,7 @@
+.latest{
+    margin-bottom: 15px;
+}
 .main{
-    
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -7,4 +9,6 @@
 .Left{ 
     margin-left: 0;
     padding-right: 0;
+    
 }
+

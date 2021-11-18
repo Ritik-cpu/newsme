@@ -51,10 +51,11 @@ export default function RightSection() {
                 />
             </div>
             <Divider />
+            <Typography variant="h4" color="initial">videos</Typography>
+
             <Grid sx={{marginTop:'10px', marginBottom:'10px'}} container spacing={2}>
                 <Grid item xs={6}>
                 <CardMedia component='img' title="" image="https://images.unsplash.com/photo-1633837145347-a758fb218a81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80" />
-              
                 </Grid>
                 <Grid item xs={6}>
                 <CardMedia component='img' title="" image="https://images.unsplash.com/photo-1633837145347-a758fb218a81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80" />

@@ -14,9 +14,13 @@ export default function Layout({children}) {
     return (
        <div >
            <div className={styles.main}>
+           
            <Container className={styles.Left}  maxWidth='lg'>
-                <Header/>
+                   <div className={styles.header}>
+                   <Header/>
                 {children}
+                   </div>
+                
            </Container>
            <Container  sx={{height:'100%'}} maxWidth='sm'>
                 <RightSection/>

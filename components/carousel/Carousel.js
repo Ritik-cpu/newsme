@@ -53,7 +53,7 @@ function Carousel() {
   };
 
   return (
-    <Box sx={{flexGrow: 1 }}>
+    <Box sx={{flexGrow: 1, }}>
       <Paper
         square
         elevation={0}

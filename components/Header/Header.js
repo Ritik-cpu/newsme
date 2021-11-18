@@ -12,7 +12,9 @@ export default function Header() {
                 <Typography variant="h3" color="initial">
                     MY-NEWS
                 </Typography>
-                {/* date */}
+                <div className={styles.dates}>
+                    <Typography variant="h5" color="initial">time</Typography>
+                </div>
                 {/* temprature corona cases */}
                 <Divider/>
             </div>

@@ -8,7 +8,81 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { makeStyles } from '@mui/styles';
+import { List, ListItemButton, ListItemText } from '@mui/material';
+ 
+  const useStyles = makeStyles((theme) => ({
+    navbar:{
+    
+    },
+    listFlex:{
+      display:'flex'
+    },
+    iconHide:{
+      display:'none',
+    }
+}));
 
+export default function Navbar() {
+  const {navbar, listFlex,iconHide}=useStyles();
+  return (
+    // <Box sx={{ flexGrow: 1, }}>
+      <AppBar className={navbar} position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            className={iconHide}
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <List className={listFlex}>
+            <ListItemButton>
+            <a href="#">INDIA</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">BUSINESS</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">TECH</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">SCIENCE</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">SPORT</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">VIDEO</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">ENTERTAINMENT</a>
+            </ListItemButton>
+            <ListItemButton>
+            <a href="#">WORLD</a>
+            </ListItemButton>
+          </List>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+        </Toolbar>
+      </AppBar>
+    // </Box>
+  );
+}
+
+
+
+// here component css
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -35,6 +109,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  zIndex:'100',
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
@@ -50,40 +125,3 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
-export default function Navbar() {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            MUI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
-}

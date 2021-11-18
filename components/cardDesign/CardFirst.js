@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
+import { Box } from '@mui/system';
 
 const useStyles=makeStyles({
     root:{
@@ -13,7 +14,7 @@ const useStyles=makeStyles({
 export default function CardFirst() {
     const {root}=useStyles();
   return (
-    <Card className={root}>
+    <Box className={root}>
       <CardMedia
         component="img"
         height="140"
@@ -29,6 +30,6 @@ export default function CardFirst() {
           species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
-    </Card>
+    </Box>
   );
 }

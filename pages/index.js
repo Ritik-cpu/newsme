@@ -1,7 +1,9 @@
 import { Container } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
+import CardTwo from '../components/cardDesign/CardTwo'
 import Carousel from '../components/carousel/Carousel'
+import India from '../components/india/India'
 import Latest from '../components/Latest/Latest'
 import styles from '../styles/Home.module.css'
 
@@ -18,10 +20,11 @@ export default function Home() {
         <Container sx={{background:'white'}}>
            <Carousel/>
         </Container>
-        <Container sx={{background:'white',margin:'16px 0'}}>
+        <Container className={styles.latestContainer}>
           <Latest/>
-          <Latest/>
-          <Latest/>
+        </Container>
+        <Container sx={{width:'100%',background:'white',paddingBottom:'20px'}} >
+          <India/>
         </Container>
        </main>
     </div>
